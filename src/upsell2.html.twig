@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1,maximum-scale=1,minimum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="referrer" content="no-referrer-when-downgrade">
+    <meta name="robots" content="noindex,nofollow">
+    <title>{{ first_product_name }}</title>
+    {{ header|raw }}
+</head>
+
+<body>
+<div class="wrapper no-aside order2">
+    <div class="row">
+        <div class="content">
+            <h1>
+                Uwaga: Ważna informacja o Twoim zamówieniu [dofinansowanie!]
+            </h1>
+
+            <p>
+                Dziękujemy za złożenie zamówienia… ale dobre wiadomości jeszcze się nie skończyły!
+            </p>
+
+            <p>
+                Podczas weryfikacji Twoich danych adresowych okazało się, że mieszkasz na terenie, którego mieszkańcy uprawnieni są do <b>specjalnego dofinansowania:</b>
+            </p>
+
+            <h2>
+                Otrzymasz specjalne dofinansowanie na zakup dodatkowego, dużego opakowania {{ first_product_name }} już za {{ offer_price }} {{ offer_currency_code }}.
+            </h2>
+
+            <h1>
+                Dlaczego jest to tak opłacalne?
+            </h1>
+
+            <p>
+                Dzięki dofinansowaniu (które pokrywa aż 88% ceny bazowej!) i niewielkiej opłacie otrzymasz finalnie <b>dwa duże opakowania {{ first_product_name }} zamiast jednego - w niezwykle atrakcyjnej dla Ciebie cenie.</b>
+            </p>
+
+            <p>
+                W ten sposób zyskujesz gwarancję uzyskania oczekiwanych efektów, nawet jeśli należysz do grona osób, którym żadna wypróbowana metoda dotychczas nie pomogła.
+            </p>
+
+            <h1>
+                Dlatego, jeśli:
+            </h1>
+
+            <div class="product-box">
+                <div class="product">
+                    <img src="{{ cdn_product_image_upsell }}" alt="{{ first_product_name }}">
+                </div>
+
+                <div class="text">
+                    <ol>
+                        <li>Twój problem trwa dłużej niż 1 rok</li>
+                        <li>Próbowałeś(-aś) różnych metody pozbycia się tego problemu, ale bez skutku</li>
+                        <li>Nagłe zmiany stylu życia stresują Cię </li>
+                    </ol>
+
+                    <p>
+                        Skorzystaj z opcji dofinansowania, która da Ci aż 2 duże pakiety i pozwoli wyeliminować Twój problem raz na zawsze, bez wyrzeczeń.
+                    </p>
+                </div>
+            </div>
+
+            <h1>
+                To nie wszystko!
+            </h1>
+
+            <p>
+                Dzięki dofinansowaniu otrzymujesz również <b>profesjonalne wsparcie specjalisty na okres 3 miesięcy.</b> W ten sposób, nawet <u>jeśli natrafisz na jakiekolwiek trudności podczas kuracji, nasz specjalista będzie do Twojej dyspozycji w każdej chwili – pomoże Ci,</u> abyś jak najszybciej osiągnął(-ęła) swoje cele. Bez stresu i wyrzeczeń!
+            </p>
+
+            <p>
+                Niestety liczba osób, które mogą otrzymać dofinansowanie, jest ograniczona i (ze względu na duże zainteresowanie) bardzo szybko się zmniejsza. Dlatego jeśli chcesz otrzymać  duży zestaw książki z 2 opakowaniami  {{ first_product_name }} i wsparcie specjalisty, <b>działaj natychmiast.</b>
+            </p>
+
+
+
+            <div class="btn">
+                <button class="greenBtn js-btn-send-yes" clp-action="upsell2">TAK! Korzystam z dofinansowania i odbieram zestaw z 2 dużymi opakowaniami {{ first_product_name }} oraz wsparcie specjalisty >></button>
+                <br>
+                <a class="grayBtn" clp-action="reject">Nie. Nie potrzebuję gwarancji, że osiągnę swój cel >></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ footer|raw }}
+</body>
+
+</html>

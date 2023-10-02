@@ -1,0 +1,74 @@
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <title>{{ first_product_name }}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A page's description, usually one or two sentences.">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" media="print" onload="this.media='all'">
+  {{ header|raw }}
+</head>
+
+<body id="upsell">
+  <div class="wrapper">
+    <div class="thanks_box">
+      Dziękujemy! Twoje zamówienie zostało przyjęte do realizacji.
+    </div>
+
+    <h1 class="upsell_heading">Zanim przejdziesz do następnego kroku…</h1>
+    <p class="upsell_subheading">…przeczytaj to, ponieważ ta strona będzie dla Ciebie widoczna tylko jeden, jedyny
+      raz.</p>
+    <p class="lead">TEXT 1</p>
+
+    <p class="upsell_txt">TEXT 2</p>
+    <p class="upsell_txt"> TEXT 3</p>
+    <h2>Dlaczego to się opłaca?</h2>
+
+
+    <div class="table">
+      <div class="table_head_bg"></div>
+      <div class="table_item head_1">2 małe op. bez rabatu</div>
+      <div class="table_item head_2">1 duże op. z&nbsp;rabatem</div>
+
+      <div class="table_item product_small">
+        <img src="{{ cdn_product_image_upsell }}" alt="Small" class="lazy">
+      </div>
+      <div class="table_item product_big">
+        <img src="{{ cdn_product_image }}" alt="Big" class="lazy">
+      </div>
+
+      <div class="table_item quantity">Ilość kapsułek</div>
+      <div class="table_item quantity_small">15 + 15</div>
+      <div class="table_item quantity_big">30</div>
+
+      <div class="table_item total">Razem</div>
+      <div class="table_item price_small">{{ offer_old_price }} {{ offer_currency_code }} </div>
+      <div class="table_item price_big">{{ offer_price }} {{ offer_currency_code }}</div>
+
+      <div class="table_item table_item_empty_1"></div>
+      <div class="table_item table_item_empty_2"></div>
+    </div>
+
+
+    <p class="lead_2">Zamień małe opakowanie na duże, które się bardziej opłaca.</p>
+    <p class="upsell_txt">Twoje zamówienie na małe opakowanie {{ first_product_name }}, które złożyłeś przed chwilą, zostało
+      już przyjęte i zapisane w systemie. Korzystając z przycisków poniżej, możesz wymienić małe opakowanie na
+      duże, które bardziej się opłaca.</p>
+
+    <div class="btn1">
+      <button class="greenBtn js-btn-send-yes" clp-action="upsell">Zamawiam duże opakowanie i oszczędzam</button>
+      <br />
+      <a href="" class="grayBtn" clp-action="reject">Nie, dziękuję. Zostaje przy małym opakowaniu</a>
+    </div>
+    <div class="upsell">
+      <!-- page: upsell -->
+    </div>
+  </div>
+
+
+
+
+  {{ footer|raw }}
+</body>
+
+</html>

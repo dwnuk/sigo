@@ -1,0 +1,30 @@
+$primary-color: #A3D6A7;
+$secondary-color: #FFB56C;
+
+
+html {
+	font-size: 62.5%;
+    font-family: 'Libre Franklin', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #15250E;
+    color: #ffffff;
+    font-size: 1.6rem;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+@media (min-width: 1920px) {
+    h2 {
+        font-size: 5.8rem;
+        text-transform: uppercase;
+        font-weight: 300;
+    }
+}
