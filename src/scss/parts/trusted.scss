@@ -1,0 +1,41 @@
+.trusted {
+    padding-bottom: 75px;
+    h2 {
+        margin-bottom: 35px;
+    }
+
+    &_list {
+        column-gap: 60px;
+
+        li {
+            cursor: pointer;
+        }
+    }
+}
+
+@media (min-width: $md) {
+    .trusted {
+        padding-bottom: 92px;
+        h2 {
+            margin-bottom: 50px;
+        }
+    }
+}
+
+@media (min-width: $lg) {
+    .trusted {
+        padding-bottom: 120px;
+        h2 {
+            margin-bottom: 80px;
+        }
+    }
+}
+
+@media (min-width: $xxl) {
+    .trusted {
+        h2 {
+            margin-bottom: 112px;
+        }
+    }
+}
+
