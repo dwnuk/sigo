@@ -8,6 +8,10 @@ html {
     scroll-behavior: smooth;
 }
 
+.secondary-color {
+    color: $secondary-color;
+}
+
 img {
     max-width: 100%;
 }
@@ -25,18 +29,23 @@ h2 {
     font-weight: 300;
 }
 
+@media (min-width: $lg) {
+    h2 {
+        font-size: 4rem;
+
+    }
+}
+
 @media (min-width: $xl) {
     h2 {
         font-size: 4.8rem;
-        text-transform: uppercase;
-        font-weight: 300;
+
     }
 }
 
 @media (min-width: $xxl) {
     h2 {
         font-size: 5.8rem;
-        text-transform: uppercase;
-        font-weight: 300;
+
     }
 }

@@ -116,6 +116,12 @@
         &_bosses {
             width: 50%;
             flex-shrink: 0;
+
+            div {
+                p {
+                    font-size: 2.5rem;
+                }
+            }
         }
 
     }
@@ -130,13 +136,21 @@
         }
 
         &_txt {
-            font-size: 2.5rem;
+            font-size: 2.2rem;
 
         }
         &_content {
             padding: 20px 80px 20px 0;
             .container {
                 padding-left: calc((100vw - #{$xl-container} + 15px) / 2);
+            }
+        }
+
+        &_bosses {
+            div {
+                p {
+                    font-size: 3rem;
+                }
             }
         }
     }
@@ -158,6 +172,14 @@
         &_txt {
             font-size: 3rem;
             margin-bottom: 40px;
+        }
+
+        &_bosses {
+            div {
+                p {
+                    font-size: 4rem;
+                }
+            }
         }
     }
 }
