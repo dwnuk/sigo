@@ -37,7 +37,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             template: "./src/index.html.twig",
-            filename: `index.${fileExtension}`,
+            filename: `index.html`,
             chunks: ['index', `${dataCoreFile}`]
         }),
 

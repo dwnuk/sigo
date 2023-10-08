@@ -5,7 +5,6 @@ const trusted = new Splide( '.trusted_slider', {
   type   : 'loop',
   drag   : 'free',
   focus  : 'center',
-
   autoStart: true,
   arrows: false,
   pagination: false,
