@@ -1,107 +1,3 @@
-@keyframes contentVanish {
-    from {
-        display: flex;
-        opacity: 1;
-    }
-
-    to {
-        opacity: 0;
-        display: none;
-    }
-}
-
-@keyframes extendedEl {
-    0% {
-        display: none;
-        opacity: 0;
-    }
-
-    1% {
-        display: block;
-    }
-
-   100% {
-        display: block;
-        opacity: 1;
-    }
-}
-
-@keyframes rotate {
-    0% {
-        transform: rotate(0deg);
-        right: calc(100% - 45px)
-    }
-
-    100% {
-        transform: rotate(-180deg);
-        left: auto;
-        right: 0;
-    }
-}
-
-.realizations_content {
-    &.vanish {
-        opacity: 0;
-        display: none;
-        animation-name: contentVanish;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-    }
-
-    &.appear {
-        opacity: 1;
-        display: block;
-        animation-name: contentVanish;
-        animation-duration: 2s;
-        animation-fill-mode: forwards;
-        animation-direction: reverse;
-    }
-}
-
-.realizations_extended {
-    &.appear {
-        display: block;
-    }
-
-
-    &_el {
-        &.appear {
-            display: block;
-            opacity: 1;
-            animation-name: extendedEl;
-            animation-duration: 2s;
-            animation-fill-mode: forwards;
-        }
-
-        &.vanish {
-            display: block;
-            opacity: 0;
-            animation-name: extendedEl;
-            animation-duration: 2s;
-            animation-fill-mode: forwards;
-            animation-direction: reverse;
-        }
-    }
-}
-
-.extended_arrow {
-    &.rotate {
-        right: calc(100% - 45px);
-        animation-name: rotate;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-    }
-
-    &.unrotate {
-        right: 0;
-        animation-name: rotate;
-        animation-duration: 1s;
-        animation-fill-mode: forwards;
-        animation-direction: reverse;
-    }
-}
-
-
 .realizations {
     padding-bottom: 78px;
 
@@ -124,10 +20,9 @@
     &_content {
         display: flex;
         flex-wrap: wrap;
+        align-content: flex-start;
         row-gap: 22px;
-
-
-
+        z-index: 30;
     }
 
     &_el {
@@ -162,14 +57,11 @@
         width: 100%;
 
         &_el {
-
             color: $primary-color;
             position: relative;
             padding-top: 73px;
-
-
-
-
+            display: none;
+            opacity: 0;
 
             .extended_arrow {
                 position: absolute;

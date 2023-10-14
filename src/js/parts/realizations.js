@@ -1,3 +1,7 @@
+import {
+    gsap
+} from "gsap";
+
 const realizationsEl = document.querySelectorAll('.realizations_el');
 const extendedEl = document.querySelectorAll('.realizations_extended_el');
 const content = document.querySelector('.realizations_content');
@@ -5,90 +9,142 @@ const extended = document.querySelector('.realizations_extended');
 const wrapper = document.querySelector('.realizations');
 const arrowRotate = document.querySelectorAll('.extended_arrow');
 
+
+
 // Add click event listener to elements from the first array
 realizationsEl.forEach((element, index) => {
     element.addEventListener('click', () => {
         wrapper.scrollIntoView();
 
-        extended.classList.add('appear');
+        // disappear realizations_content
+        var tl = gsap.timeline();
+        tl.to(content, {
+            opacity: 0,
+            duration: 1
+        });
+        tl.to(content, {
+            display: 'none'
+        });
 
 
 
-        if (content.classList.contains('appear')) {
-            content.classList.remove('appear');
-            content.classList.add('vanish');
-        } else {
-            content.classList.add('vanish');
-        }
+        // appear realizations_extended
+        var tl2 = gsap.timeline();
+        tl2.to([extended, extendedEl[index]], {
+            display: 'block',
+            duration: .1
+        });
+        tl2.to(extendedEl[index], {
+            opacity: 1,
+            duration: 1
+        });
 
-        if (extendedEl[index].classList.contains('vanish')) {
-            extendedEl[index].classList.remove('vanish');
-            extendedEl[index].classList.add('appear');
-        } else {
-            extendedEl[index].classList.add('appear');
-        }
+        // rotate move arrow
+        gsap.fromTo(arrowRotate, {
+            right: '100%',
+            x: '100%'
+        }, {
+            rotation: -180,
+            right: 0,
+            x: '0',
+            duration: 1
+        });
 
-        if (arrowRotate[index].classList.contains('unrotate')) {
-            arrowRotate[index].classList.remove('unrotate');
-            arrowRotate[index].classList.add('rotate');
-        } else {
-            arrowRotate[index].classList.add('rotate');
-        }
     });
 });
 
 
-//  collapse function
+//  collapse function with wróć button
 
 const extendedCollapse = document.querySelectorAll('.realizations_extended_collapse');
 
-const extendedArrow = document.querySelectorAll('.extended_arrow');
 
 // wróć button
 extendedCollapse.forEach(function (childElement) {
     childElement.addEventListener('click', function () {
         // Get the parent element of the clicked child
         const parentElement = this.parentElement;
-
-
-
-
-        parentElement.classList.remove('appear');
-        extended.classList.remove('appear');
-
-        // parentElement.classList.add('unappear');
-        // extended.classList.add('unappear');
-
-        content.classList.remove('vanish');
         wrapper.scrollIntoView();
+
+        // disappear realizations_extended
+        var tl = gsap.timeline();
+        tl.to(parentElement, {
+            opacity: 0,
+            duration: 1
+        });
+        tl.to([parentElement, extended], {
+            display: 'none'
+        });
+
+
+         // appear realizations_content
+         var tl2 = gsap.timeline();
+         tl2.to(content, {
+             display: 'flex'
+         });
+         tl2.to(content, {
+            display: 'flex',
+             opacity: 1,
+             duration: 1
+         });
+
+         // rotate move arrow
+        gsap.fromTo(arrowRotate, {
+            rotation: -180,
+            right: 0,
+            x: '0'
+        }, {
+            right: '100%',
+            x: '100%',
+            rotation: 0,
+            duration: 1
+        });
 
     });
 });
 
 
 //  arrow button
-extendedArrow.forEach(function (childElement) {
+arrowRotate.forEach(function (childElement) {
     childElement.addEventListener('click', function () {
         // Get the parent element of the clicked child
         const parentElement = this.parentElement;
-        this.classList.remove('rotate');
-        this.classList.add('unrotate');
-
-        setTimeout(() => {
-            extended.classList.remove('appear');
-          }, "1000");
-
-        content.classList.remove('vanish');
-        content.classList.add('appear');
-
-
-        if (parentElement.classList.contains('appear')) {
-            parentElement.classList.remove('appear');
-            parentElement.classList.add('vanish');
-        } else {
-            parentElement.classList.add('vanish');
-        }
-
+        // this.classList.remove('rotate');
+        // this.classList.add('unrotate');
         wrapper.scrollIntoView();
+
+        // appear realizations_content
+        var tl2 = gsap.timeline();
+        tl2.to(content, {
+            display: 'flex'
+        });
+        tl2.to(content, {
+            display: 'flex',
+            opacity: 1,
+            duration: 1
+        });
+
+         // disappear realizations_extended
+         var tl = gsap.timeline();
+         tl.to(parentElement, {
+             opacity: 0,
+             duration: 1
+         });
+         tl.to([parentElement, extended], {
+             display: 'none'
+         });
+
+         // rotate move arrow
+        gsap.fromTo(childElement, {
+            rotation: -180,
+            right: 0,
+            x: '0'
+        }, {
+            right: '100%',
+            x: '100%',
+            rotation: 0,
+            duration: 1
+        });
+
     });
 });
