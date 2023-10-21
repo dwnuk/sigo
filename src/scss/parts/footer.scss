@@ -8,6 +8,10 @@
         justify-content: space-between;
         margin-bottom: 85px;
 
+        h2 {
+            font-size: 2rem;
+        }
+
         img {
             max-height: 40px;
         }
@@ -139,6 +143,9 @@
         padding: 71px 0;
 
         &_heading {
+            h2 {
+                font-size: 3rem;
+            }
             img {
                 max-height: 72px;
             }
@@ -216,6 +223,9 @@
         &_heading {
             img {
                 max-height: 72px;
+            }
+            h2 {
+                font-size: 4rem;
             }
         }
 
@@ -301,6 +311,9 @@
         &_heading {
             img {
                 max-height: 140px;
+            }
+            h2 {
+                font-size: 5rem;
             }
         }
 

@@ -7,7 +7,7 @@
     const offerEl = document.querySelectorAll('.offer__el');
 
     // Check if the screen width is less than 768px
-    if (screenWidth < 992) {
+    if (window.innerWidth < 992) {
       // Add click event listener to each element
       offerEl.forEach(function(element) {
         element.addEventListener('click', function() {
