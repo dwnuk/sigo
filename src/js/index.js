@@ -5,6 +5,7 @@ import './parts/header'
 import './parts/offerEl'
 import './parts/slider'
 import './parts/realizations'
+import './parts/copy'
 
 
 // style
