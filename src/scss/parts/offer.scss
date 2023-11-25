@@ -35,6 +35,8 @@
         transition-property: color, max-height, border-color;
         transition-duration: .5s;
         transition-timing-function: ease-out;
+        width: 100%;
+        cursor: pointer;
 
 
         &.show {
@@ -43,6 +45,8 @@
             color: $secondary-color;
             border-color: $secondary-color;
             transition: .5s;
+
+
 
         }
 

@@ -10,6 +10,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet" />
 </head>
+<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css" rel="stylesheet">
 
 <body>
   <header class="header navDestination" id="return">
@@ -41,7 +43,36 @@
       </div>
 
       <div class="header__wrapper">
-        <img src="./images/header_arrow.svg" alt="header arrow img" class="header__arrow" />
+
+        <div class="header__arrow">
+          <div class="splide header__arrow__slider" role="group" aria-label="Splide Basic HTML Example">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide">
+                  <img src="./images/header_arrow.svg" alt="header arrow img" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/slide-1.png" alt="header arrow img" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/slide-2.png" alt="header arrow img" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/slide-3.png" alt="header arrow img" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/slide-4.png" alt="header arrow img" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/slide-5.png" alt="header arrow img" />
+                </li>
+                <li class="splide__slide">
+                  <img src="./images/slide-6.png" alt="header arrow img" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
 
         <div class="content">
           <p class="txt header-txt">
@@ -603,13 +634,14 @@
         </div>
       </div>
       <div class="about_bosses">
-        <div>
-          <img src="./images/silentkiller.png" alt="boss image" />
-          <p>Łukasz <br />Cichy <br /><i>CEO</i></p>
-        </div>
+
         <div>
           <img src="./images/goat.png" alt="boss image" />
           <p>Karol <br />Kozicki <br /><i>CEO</i></p>
+        </div>
+        <div>
+          <img src="./images/silentkiller.png" alt="boss image" />
+          <p>Łukasz <br />Cichy <br /><i>CEO</i></p>
         </div>
       </div>
     </div>
