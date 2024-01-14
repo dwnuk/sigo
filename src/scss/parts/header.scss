@@ -175,6 +175,16 @@ h1 {
 
 @media (min-width: $xxl) {
     .header {
+
+        &__arrow {
+            width: 58%;
+        }
+    }
+}
+
+
+@media (min-width: $xxxl) {
+    .header {
         &__wrapper {
 
 

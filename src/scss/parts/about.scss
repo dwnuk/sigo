@@ -157,11 +157,11 @@
     }
 }
 
-@media (min-width: $xxl) {
+@media (min-width: $xxxl) {
     .about {
         &_content {
             .container {
-                padding-left: calc((100vw - #{$xxl-container} + 15px) / 2);
+                padding-left: calc((100vw - #{$xxxl-container} + 15px) / 2);
             }
         }
 

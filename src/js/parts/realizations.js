@@ -151,18 +151,18 @@ arrowRotate.forEach(function (childElement) {
 
 
 
-const moreBtn = document.querySelector('.more_btn');
-const moreBox = document.querySelector('.realizations_more');
+// const moreBtn = document.querySelector('.more_btn');
+// const moreBox = document.querySelector('.realizations_more');
 
-moreBtn.addEventListener('click', function() {
-    if (moreBtn.textContent === 'więcej') {
-        moreBtn.textContent = 'mniej';
-        moreBtn.style.marginTop = '50px';
-        moreBox.style.maxHeight = '800px';
-        console.log('elo');
-    } else {
-        moreBtn.textContent = 'więcej';
-        moreBox.style.maxHeight = '0';
-        moreBtn.style.marginTop = '0';
-    }
-});
+// moreBtn.addEventListener('click', function() {
+//     if (moreBtn.textContent === 'więcej') {
+//         moreBtn.textContent = 'mniej';
+//         moreBtn.style.marginTop = '50px';
+//         moreBox.style.maxHeight = '800px';
+//         console.log('elo');
+//     } else {
+//         moreBtn.textContent = 'więcej';
+//         moreBox.style.maxHeight = '0';
+//         moreBtn.style.marginTop = '0';
+//     }
+// });

@@ -3,14 +3,16 @@ $sm: 576px;
 $md: 768px;
 $lg: 992px;
 $xl: 1200px;
-$xxl: 1920px;
+$xxl: 1400px;
+$xxxl: 1920px;
 
 // container width
 $sm-container: 540px;
 $md-container: 676px;
 $lg-container: 960px;
 $xl-container: 1140px;
-$xxl-container: 1500px;
+$xxl-container: 1320px;
+$xxxl-container: 1500px;
 
 *, ::after, ::before {
   -webkit-box-sizing: border-box;
@@ -106,9 +108,15 @@ $xxl-container: 1500px;
   .d-xl-none {
     display: none!important; } }
 
-  @media (min-width: $xxl) {
+    @media (min-width: $xxl) {
+      .container {
+        max-width: $xxl-container;
+      }
+    }
+
+  @media (min-width: $xxxl) {
     .container {
-      max-width: $xxl-container;
+      max-width: $xxxl-container;
     }
   }
 .row {
