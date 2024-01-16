@@ -20,6 +20,7 @@ part1.from(headArrow, {
   duration: 1,
   position: 'absolute',
   bottom: '15px',
+  ease: "power3.out",
   left: 0,
   y: 0,
   height: '45px',
@@ -41,4 +42,5 @@ part2.to(headTxt, {
 });
 part2.to(headHead, {
   scale: 1,
+  duration: .5,
 });
