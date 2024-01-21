@@ -4,6 +4,7 @@ import './parts/slider'
 import './parts/lastLetters'
 import './parts/nav'
 import './parts/header'
+import './parts/logo'
 
 
 import './parts/realizations'

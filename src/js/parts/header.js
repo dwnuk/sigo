@@ -3,6 +3,8 @@ import {
 } from "gsap";
 
 
+
+
 const headWrapper = document.querySelector('.header__wrapper');
 const headArrow = document.querySelector('.header__arrow');
 const headTxt = document.querySelector('.header-txt');
@@ -10,14 +12,14 @@ const headHead = document.querySelector('.header-heading');
 
 
 gsap.to(headWrapper, {
-  delay: 3,
+  delay: 1.3,
   height: 'auto',
 });
 
 var part1 = gsap.timeline();
 part1.from(headArrow, {
-  delay: 1,
-  duration: 1,
+  delay: .5,
+  duration: .75,
   position: 'absolute',
   bottom: '15px',
   ease: "power3.out",
@@ -36,11 +38,14 @@ part1.to(headArrow, {
 
 var part2 = gsap.timeline();
 part2.to(headTxt, {
-  delay: 2.5,
-  duration: .5,
-  opacity: 1
+  delay: 1.25,
+  duration: .25,
+  opacity: 1,
+  scale: 1,
 });
 part2.to(headHead, {
   scale: 1,
-  duration: .5,
+  duration: .25,
 });
+
+
