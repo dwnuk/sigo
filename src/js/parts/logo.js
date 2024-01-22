@@ -8,7 +8,7 @@ import {
 
 gsap.registerPlugin(ScrollTrigger);
 
-const logoS = document.querySelector('.logo-s');
+const logo = document.querySelector('.logo');
 const logoI = document.querySelector('.logo-i');
 const logoG = document.querySelector('.logo-g');
 const logoOstudio = document.querySelector('.logo-ostudio');
@@ -30,11 +30,14 @@ window.addEventListener("scroll", function () {
   if (scrollPosition > scrollThreshold) {
 
 
-
+    // gsap.to(logo, {
+    //  height: '42px',
+    // });
 
 
     gsap.to(logoI, {
       opacity: 0,
+      y: -100,
       maxWidth: '0',
       duration: .5,
     });
@@ -50,6 +53,7 @@ window.addEventListener("scroll", function () {
     // Change color back when scrolling up
     gsap.to(logoI, {
       opacity: 1,
+      y: 0,
       maxWidth: '100%',
       duration: 1,
     });

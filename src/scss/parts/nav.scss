@@ -1,5 +1,7 @@
 .topbar {
-    background-color: #16270F;
+    background: rgba(22,39,15, .5);
+
+backdrop-filter: blur(10px);
     z-index: 999999;
     top: 0;
     position: fixed;
@@ -9,6 +11,18 @@
 
     &.fixed {
         padding: 15px 0 15px;
+
+        .nav-box {
+            nav {
+                padding-bottom: 10px;
+            }
+        }
+
+        .top {
+            .logo {
+                height: 42px;
+            }
+        }
     }
 }
 
@@ -23,6 +37,7 @@
         height: 24px;
         display: flex;
         flex-wrap: nowrap;
+        transition: height .5s;
 
 
         img {
@@ -70,6 +85,7 @@
     align-items: flex-end;
     row-gap: 18px;
     padding-top: 18vh;
+    transition: padding .5s;
 
     .nav__el {
         font-size: 2.5rem;
