@@ -7,7 +7,8 @@ var arrow = new Splide( '.header__arrow__slider', {
   pagination: false,
   autoplay: true,
   perPage: 1,
-  speed: 2500
+  speed: 2500,
+  pauseOnHover: false,
 
 
 } );

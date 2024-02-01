@@ -46,6 +46,7 @@
             height: 50px;
             top: 20px;
             right: 20px;
+            transition: opacity .25s;
 
         }
 
@@ -171,8 +172,8 @@
                     opacity: 1;
                 }
 
-                .cls-1 {
-                    fill: $secondary-color;
+                .offer__icon {
+                    opacity: 0;
                 }
             }
         }
@@ -208,8 +209,8 @@
 
             .offer__icon {
 
-                width: 100px;
-                height: 100px;
+                width: 125px;
+                height: 125px;
 
 
             }
@@ -232,6 +233,14 @@
             height: 410px;
             max-height: 410px;
 
+            .offer__icon {
+
+                width: 150px;
+                height: 150px;
+
+
+            }
+
             &--heading {
                 font-size: 2.5rem;
             }
@@ -242,6 +251,8 @@
             }
 
         }
+
+
     }
 }
 
@@ -258,6 +269,14 @@
             max-height: 468px;
             row-gap: 80px;
             padding: 32px;
+
+            .offer__icon {
+
+                width: 175px;
+                height: 175px;
+
+
+            }
 
             &--heading {
                 font-size: 3rem;

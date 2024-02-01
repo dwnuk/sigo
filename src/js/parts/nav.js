@@ -7,14 +7,15 @@ const topbar = document.querySelector('.topbar');
 
 let topbarOffset = topbar.offsetTop;
 
-function showNav() {
-    nav.classList.add('show');
+// show/hide mobile nav
+function toggleNav() {
+    nav.classList.toggle('show');
+    burgerBtn.classList.toggle('active');
 }
 
-function hideNav() {
-    nav.classList.remove('show');
-}
 
+
+// add class to nav when scrolled
 function glueNav() {
     if (window.scrollY > topbarOffset) {
         topbar.classList.add('fixed');
@@ -23,16 +24,18 @@ function glueNav() {
     }
 }
 
-burgerBtn.addEventListener('click', showNav);
-closeBtn.addEventListener('click', hideNav);
+// events
+burgerBtn.addEventListener('click', toggleNav);
+
 window.addEventListener('scroll', glueNav);
 
 
-
+// make nav work
 navEl.forEach((element, index) => {
     element.addEventListener('click', () => {
         nav.classList.remove('show');
         navDestination[index].scrollIntoView();
+        burgerBtn.classList.toggle('active');
     });
 });
 
@@ -55,6 +58,7 @@ navEl.forEach((element, index) => {
 //     });
 // });
 
+// make nav el bold when in corresponding section
 document.addEventListener('DOMContentLoaded', function () {
     var menuItems = document.querySelectorAll('.nav__el');
     var sections = document.querySelectorAll('.navDestination');

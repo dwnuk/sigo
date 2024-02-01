@@ -41,12 +41,12 @@ module.exports = {
             chunks: ['index', `${dataCoreFile}`]
         }),
 
-        // new CopyWebpackPlugin({
-        //     patterns: [{
-        //         from: "./src/html/**/*",
-        //         to: "[name].[ext]",
-        //     }]
-        // }),
+        new CopyWebpackPlugin({
+            patterns: [{
+                from: "./src/pdf/**/*",
+                to: "[name].[ext]",
+            }]
+        }),
 
         new CleanWebpackPlugin()
     ],

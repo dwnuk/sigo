@@ -5,7 +5,6 @@
   "main": "webpack.config.js",
   "scripts": {
     "dev": "webpack serve",
-    "clp": "node getDev.js",
     "build": "cross-env NODE_ENV=production webpack",
     "prod": "cross-env NODE_ENV=production webpack & git add . & git commit -m update & git push"
   },
