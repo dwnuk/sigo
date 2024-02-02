@@ -32,6 +32,7 @@ part1.to(headArrow, {
   duration: 0,
   position: 'static',
   y: 0,
+  ease: "power3.out",
 
 });
 

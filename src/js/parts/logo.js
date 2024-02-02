@@ -9,6 +9,7 @@ import {
 gsap.registerPlugin(ScrollTrigger);
 
 const logo = document.querySelector('.logo');
+const logoS = document.querySelector('.logo-s');
 const logoI = document.querySelector('.logo-i');
 const logoG = document.querySelector('.logo-g');
 const logoOstudio = document.querySelector('.logo-ostudio');
@@ -35,11 +36,13 @@ window.addEventListener("scroll", function () {
     // });
 
 
+
     gsap.to(logoI, {
       opacity: 0,
       y: -100,
       maxWidth: '0',
-      duration: .5,
+
+      duration: .25,
     });
 
     gsap.to(logoOstudio, {
@@ -54,9 +57,12 @@ window.addEventListener("scroll", function () {
     gsap.to(logoI, {
       opacity: 1,
       y: 0,
+
       maxWidth: '100%',
       duration: 1,
     });
+
+
 
     gsap.to(logoOstudio, {
       opacity: 1,
