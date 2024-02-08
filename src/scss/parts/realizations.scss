@@ -91,6 +91,7 @@
     &_extended {
         z-index: 40;
         display: none;
+
         width: 100%;
 
         &_el {
@@ -99,6 +100,8 @@
             padding-top: 73px;
             display: none;
             opacity: 0;
+            overflow: hidden;
+        height: 0;
 
             .extended_arrow {
                 position: absolute;
