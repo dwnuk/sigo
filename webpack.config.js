@@ -84,6 +84,18 @@ module.exports = {
                     }
             },
             {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                include: /data-zoomable/,
+                use: {
+                    loader: "file-loader",
+                    options: {
+                        name: "[name][contenthash].[ext]",
+                        outputPath: "img/",
+                        esModule: false
+                    }
+                }
+            },
+            {
                 test: /\.twig$/,
                 use: {
                     loader: 'html-loader',
@@ -116,6 +128,12 @@ module.exports = {
                                     attribute: 'data-src',
                                     type: 'src',
                                 },
+                                {
+                                    tag: 'picture',
+                                    attribute: 'data-zoomable',
+                                    type: 'src',
+                                }
+
                             ]
                         }
                     }

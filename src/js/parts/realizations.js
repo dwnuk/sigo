@@ -6,7 +6,7 @@ const realizationsEl = document.querySelectorAll('.realizations_el');
 const extendedEl = document.querySelectorAll('.realizations_extended_el');
 const content = document.querySelector('.realizations_content');
 const extended = document.querySelector('.realizations_extended');
-const wrapper = document.querySelector('.realizations');
+const wrapper = document.querySelector('.realizations_wrapper');
 const arrowRotate = document.querySelectorAll('.extended_arrow');
 
 
@@ -20,6 +20,7 @@ realizationsEl.forEach((element, index) => {
         var tl = gsap.timeline();
         tl.to(content, {
             opacity: 0,
+
             duration: 1
         });
         tl.to(content, {
@@ -56,12 +57,12 @@ realizationsEl.forEach((element, index) => {
 });
 
 
-//  collapse function with wróć button
+
 
 const extendedCollapse = document.querySelectorAll('.realizations_extended_collapse');
 
 
-// wróć button
+//  collapse function with wróć button
 extendedCollapse.forEach(function (childElement) {
     childElement.addEventListener('click', function () {
         // Get the parent element of the clicked child
@@ -84,10 +85,11 @@ extendedCollapse.forEach(function (childElement) {
          // appear realizations_content
          var tl2 = gsap.timeline();
          tl2.to(content, {
-             display: 'flex'
+             display: 'flex',
          });
          tl2.to(content, {
             display: 'flex',
+
              opacity: 1,
              duration: 1
          });
@@ -124,6 +126,7 @@ arrowRotate.forEach(function (childElement) {
         });
         tl2.to(content, {
             display: 'flex',
+
             opacity: 1,
             duration: 1
         });
@@ -171,3 +174,31 @@ arrowRotate.forEach(function (childElement) {
 //         moreBtn.style.marginTop = '0';
 //     }
 // });
+
+
+
+
+// zoom function
+
+// Get all .zoom elements and store them in an array
+var zoomElements = document.querySelectorAll('.zoom');
+
+// Add click event listener to each .zoom element
+zoomElements.forEach(item => {
+  item.addEventListener('click', event => {
+    // Get the source from data-zoomable attribute of the clicked .zoom element
+    var imgSrc = item.getAttribute('data-zoomable');
+
+    // Display the mask
+    var mask = document.getElementById('mask');
+    mask.innerHTML = '<img class="zoomed" src="' + imgSrc + '" alt="Zoomed Image">';
+    mask.style.display = 'flex';
+  });
+});
+
+// Add click event listener to close the mask when clicked outside the image
+document.getElementById('mask').addEventListener('click', function(event) {
+    if (event.target === this || event.target.classList.contains('zoomed')) {
+      this.style.display = 'none';
+    }
+  });
