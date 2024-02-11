@@ -1,3 +1,4 @@
+import Splide from '@splidejs/splide';
 import { AutoScroll } from '@splidejs/splide-extension-auto-scroll';
 
 var arrow = new Splide( '.header__arrow__slider', {
@@ -7,7 +8,7 @@ var arrow = new Splide( '.header__arrow__slider', {
   pagination: false,
   autoplay: true,
   perPage: 1,
-  speed: 2500,
+  speed: 2000,
   pauseOnHover: false,
 
 

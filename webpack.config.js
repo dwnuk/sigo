@@ -1,9 +1,8 @@
 const path = require("path");
-const glob = require('glob');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const PurgeCSSPlugin = require('purgecss-webpack-plugin');
 
 const PATHS = {
@@ -72,7 +71,7 @@ module.exports = {
                 ],
             },
             {
-                test: /\.(pdf|svg|png|jpg|jpeg|gif|mp4|otf|webp)$/,
+                test: /\.(pdf|svg|png|jpg|jpeg|gif|mp4|otf|webp|woff2|woff|ttf)$/,
                 use:
                     {
                         loader: "file-loader",
@@ -138,7 +137,16 @@ module.exports = {
                         }
                     }
                 }
+            },
+            {
+                test: /\.css$/,
+                use: [
+                    'style-loader',
+                    'css-loader'
+                ]
             }
         ]
-    }
-}
+    },
+
+    devtool: 'source-map' // Add this line to enable source maps
+};

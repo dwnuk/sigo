@@ -101,7 +101,7 @@
             display: none;
             opacity: 0;
             overflow: hidden;
-        height: 0;
+
 
             .extended_arrow {
                 position: absolute;
@@ -283,6 +283,44 @@
 
             p {
                 font-size: 2.8rem;
+            }
+        }
+
+
+    }
+}
+
+
+@media (min-width: $xxl) {
+    .realizations {
+
+
+
+
+        &_el {
+
+
+            p {
+                font-size: 2.8rem;
+            }
+        }
+
+        &_extended {
+
+            &_el {
+                .extended_txt {
+                    p {
+                        &:first-of-type {
+                            font-size: 22px;
+
+                        }
+
+                        &:last-of-type {
+
+                            font-size: 18px;
+                        }
+                    }
+                }
             }
         }
 

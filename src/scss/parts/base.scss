@@ -2,6 +2,56 @@ $primary-color: #81dda2;
 $secondary-color: #FFB56C;
 
 
+/* Regular */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../../fonts/LibreFranklin-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* Light */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../../fonts/LibreFranklin-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/* Bold */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../../fonts/LibreFranklin-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+/* Italic */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../../fonts/LibreFranklin-Italic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Light Italic */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../../fonts/LibreFranklin-LightItalic.ttf') format('truetype');
+    font-weight: 300;
+    font-style: italic;
+}
+
+/* Bold Italic */
+@font-face {
+    font-family: 'Libre Franklin';
+    src: url('../../fonts/LibreFranklin-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+
+
 html {
 	font-size: 62.5%;
     font-family: 'Libre Franklin', sans-serif;

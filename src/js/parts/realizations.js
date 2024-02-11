@@ -37,7 +37,7 @@ realizationsEl.forEach((element, index) => {
         });
         tl2.to(extendedEl[index], {
             opacity: 1,
-            height: 'auto',
+
             duration: 1
         });
 
@@ -73,7 +73,7 @@ extendedCollapse.forEach(function (childElement) {
         var tl = gsap.timeline();
 
         tl.to(parentElement, {
-            height: '0',
+
             opacity: 0,
             duration: 1
         });
@@ -134,7 +134,7 @@ arrowRotate.forEach(function (childElement) {
          // disappear realizations_extended
          var tl = gsap.timeline();
          tl.to(parentElement, {
-            height: '0',
+
              opacity: 0,
              duration: 1
          });
